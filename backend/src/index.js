@@ -21,6 +21,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/chat", chatRoutes);
+
 if (process.env.NODE_ENV === "development") {
     // Only allow frontend at port 5173 (Vite)
     app.use(cors({
@@ -37,16 +41,6 @@ if (process.env.NODE_ENV === "development") {
       res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
     });
   }
-  
-
-app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/chat", chatRoutes);
-
-
-
-  console.log(__dirname);
-
 
 app.listen(PORT, () => {
     console.log("Server is running on PORT:" + PORT);
