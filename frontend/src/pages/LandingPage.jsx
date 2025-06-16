@@ -1,3 +1,4 @@
+import { ShipWheelIcon } from "lucide-react";
 import { Link } from "react-router";
 
 const LandingPage = () => {
@@ -6,8 +7,9 @@ const LandingPage = () => {
       {/* Navigation */}
       <nav className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-[#3ebc96]">Lang</span>
-          <span className="text-2xl font-bold">Learn</span>
+          <ShipWheelIcon className="w-8 h-8 text-[#3ebc96]" />
+          <span className="text-2xl font-bold text-[#3ebc96] font-mono">Lang</span>
+          <span className="text-2xl font-bold font-mono">Learn</span>
         </div>
         <div className="flex items-center space-x-4 sm:space-x-6">
           <Link to="/login" className="text-[#e2e8f0] hover:text-[#3ebc96] font-medium transition duration-300 text-sm sm:text-base">
@@ -111,8 +113,9 @@ const LandingPage = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start space-x-2">
-                <span className="text-2xl font-bold text-[#3ebc96]">Lang</span>
-                <span className="text-2xl font-bold">Learn</span>
+                <ShipWheelIcon className="w-8 h-8 text-[#3ebc96]" />
+                <span className="text-2xl font-bold text-[#3ebc96] font-mono">Lang</span>
+                <span className="text-2xl font-bold font-mono">Learn</span>
               </div>
               <p className="mt-2 text-[#e2e8f0]/60 text-sm sm:text-base">Making language learning accessible to everyone.</p>
             </div>
