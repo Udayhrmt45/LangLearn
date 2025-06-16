@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === "development") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
     
     // Catch-all: send index.html
-    app.get("/*", (req, res) => {
+    app.get("/{*any}", (req, res) => {
       res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
     });
   }
